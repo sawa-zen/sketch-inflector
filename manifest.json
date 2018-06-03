@@ -4,15 +4,15 @@
   "icon": "icon.png",
   "commands": [
     {
-      "name": "my-command",
-      "identifier": "my-command-identifier",
-      "script": "./src/my-command.js"
+      "name": "upcase_first",
+      "identifier": "upcase_first",
+      "script": "./src/upcase_first.js"
     }
   ],
   "menu": {
     "title": "sketch-inflector",
     "items": [
-      "my-command-identifier"
+      "upcase_first"
     ]
   }
 }
