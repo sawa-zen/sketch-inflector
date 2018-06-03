@@ -42,6 +42,7 @@
   "dependencies": {
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "sketch-module-web-view": "^1.1.7"
+    "sketch-module-web-view": "^1.1.7",
+    "upper-case-first": "^1.1.2"
   }
 }
