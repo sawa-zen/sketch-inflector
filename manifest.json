@@ -6,7 +6,7 @@
     {
       "name": "my-command",
       "identifier": "my-command-identifier",
-      "script": "./my-command.js"
+      "script": "./src/my-command.js"
     }
   ],
   "menu": {

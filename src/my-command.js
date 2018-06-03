@@ -1,3 +1,5 @@
-export default function(context) {
-  context.document.showMessage("It's alive 🙌")
-}
+import UI from "sketch/ui";
+
+export default context => {
+  UI.message("Hello world!");
+};

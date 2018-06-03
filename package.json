@@ -6,20 +6,42 @@
   },
   "skpm": {
     "name": "sketch-inflector",
-    "manifest": "src/manifest.json",
-    "main": "plugin.sketchplugin",
+    "manifest": "manifest.json",
+    "main": "inflector.sketchplugin",
     "assets": [
-      "assets/**/*"
+      "src/assets/**/*"
     ]
   },
   "scripts": {
     "build": "skpm-build",
     "watch": "skpm-build --watch",
     "start": "skpm-build --watch --run",
-    "postinstall": "npm run build && skpm-link"
+    "postinstall": "npm run build && skpm-link",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "devDependencies": {
-    "@skpm/builder": "^0.5.2"
+    "@skpm/builder": "^0.5.2",
+    "@babel/core": "^7.0.0-beta.44",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.44",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.44",
+    "@babel/preset-env": "^7.0.0-beta.44",
+    "@babel/preset-react": "^7.0.0-beta.44",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^7.1.4",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.4",
+    "prettier": "^1.12.1"
   },
-  "author": "SAWADA Takayoshi <sawadasuiren@gmail.com>"
+  "author": "sawa-zen <sawadasuiren@gmail.com>",
+  "dependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "sketch-module-web-view": "^1.1.7"
+  }
 }
