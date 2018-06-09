@@ -40,9 +40,10 @@
   },
   "author": "sawa-zen <sawadasuiren@gmail.com>",
   "dependencies": {
+    "camelcase": "^5.0.0",
+    "pluralize": "^7.0.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "sketch-module-web-view": "^1.1.7",
-    "upper-case-first": "^1.1.2"
+    "sketch-module-web-view": "^1.1.7"
   }
 }

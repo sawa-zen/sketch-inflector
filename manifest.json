@@ -4,15 +4,27 @@
   "icon": "icon.png",
   "commands": [
     {
-      "name": "upcase_first",
-      "identifier": "upcase_first",
-      "script": "./src/upcase_first.js"
+      "name": "upper camel",
+      "identifier": "upper_camel",
+      "script": "./src/upper_camel.js"
+    },
+    {
+      "name": "pluralize",
+      "identifier": "pluralize",
+      "script": "./src/pluralize.js"
+    },
+    {
+      "name": "sync to layer",
+      "identifier": "sync_to_layer",
+      "script": "./src/sync_to_layer.js"
     }
   ],
   "menu": {
-    "title": "sketch-inflector",
+    "title": "symbol-inflector",
     "items": [
-      "upcase_first"
+      "upper_camel",
+      "pluralize",
+      "sync_to_layer"
     ]
   }
 }

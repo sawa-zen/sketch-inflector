@@ -1,8 +1,8 @@
 import { getSelectedDocument } from 'sketch/dom';
 import UI from 'sketch/ui';
-import upperCaseFirst from 'upper-case-first';
+import { plural } from 'pluralize';
 
-const upcaseFirst = context => {
+const pluralizeParent = context => {
   const document = getSelectedDocument();
 
   if (!document) {
@@ -13,8 +13,12 @@ const upcaseFirst = context => {
   symbols.forEach(symbol => {
     // スラッシュで区切る
     const words = symbol.name.split('/');
-    const newWords = words.map(word => {
-      return upperCaseFirst(word);
+    const newWords = words.map((word, index) => {
+      const isParent = words.length - index > 1;
+      if (isParent) {
+        return plural(word);
+      }
+      return word;
     });
     symbol.name = newWords.join('/');
   });
@@ -22,4 +26,4 @@ const upcaseFirst = context => {
   UI.message('Finished!');
 };
 
-export default upcaseFirst;
+export default pluralizeParent;
